@@ -8,7 +8,7 @@ Sub RunMacros()
 	WScript.Echo "Getting Nocturne chart data"
     xlApp.Run "SaveChart"
 
-    WScript.Echo "Closing file
+    WScript.Echo "Closing file"
     wb.Close
 	WScript.Echo "Process complete"
     xlApp.Quit
