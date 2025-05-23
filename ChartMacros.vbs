@@ -19,7 +19,6 @@ Sub RunMacros()
 
 	WScript.Echo "Process complete"
     xlApp.Quit
-	xlApp.DisplayAlerts = True
 
 	'Clean-up
 	Set wb = Nothing
