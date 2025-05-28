@@ -9,7 +9,8 @@ Sub RunMacros()
     xlApp.Run "SaveChart"
 
     WScript.Echo "Closing file"
-    wb.Close
+    wb.Close False
+	Set wb = Nothing
 
 	Set wb = xlApp.Workbooks.Open("Z:\#Shared\Data\Tracking Spreadsheets\On Time Deliveries\CURRENT On Time Delivery.xlsm")
 
@@ -18,12 +19,13 @@ Sub RunMacros()
 	xlApp.Run "ExportOTDTables"
 
 	WScript.Echo "Process complete"
-	wb.Close
-    xlApp.Quit
+	wb.Close False
 
 	'Clean-up
 	Set wb = Nothing
+	xlApp.Quit
 	Set xlApp = Nothing
+	WScript.Echo "HERE"
 End Sub
 
 RunMacros
