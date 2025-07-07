@@ -3,7 +3,7 @@ Sub RunMacros()
     Dim xlApp
     Dim wb
     Set xlApp = CreateObject("Excel.Application")
-    Set wb = xlApp.Workbooks.Open("Z:\#Shared\Data\Tracking Spreadsheets\Philips Trackers\Updated Philips Shipping vs Potential - KPI Tracking.xlsm")
+    Set wb = xlApp.Workbooks.Open("Z:\#Shared\Data\Tracking Spreadsheets\Philips Trackers\Up To Date Philips Shipping vs Potential - KPI Tracking.xlsm")
 
 	WScript.Echo "Getting Nocturne chart data"
     xlApp.Run "SaveChart"
