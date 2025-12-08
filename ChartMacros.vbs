@@ -12,20 +12,19 @@ Sub RunMacros()
     wb.Close False
 	Set wb = Nothing
 
-	Set wb = xlApp.Workbooks.Open("Z:\#Shared\Data\Tracking Spreadsheets\On Time Deliveries\CURRENT On Time Delivery.xlsm")
+	' Set wb = xlApp.Workbooks.Open("Z:\#Shared\Data\Tracking Spreadsheets\On Time Deliveries\CURRENT On Time Delivery.xlsm")
 
-	WScript.Echo "Getting OTD data"
-	xlApp.Run "ExportCharts"
-	xlApp.Run "ExportOTDTables"
+	' WScript.Echo "Getting OTD data"
+	' xlApp.Run "ExportCharts"
+	' xlApp.Run "ExportOTDTables"
 
-	WScript.Echo "Process complete"
-	wb.Close False
+	' WScript.Echo "Process complete"
+	' wb.Close False
 
-	'Clean-up
-	Set wb = Nothing
+	' 'Clean-up
+	' Set wb = Nothing
 	xlApp.Quit
 	Set xlApp = Nothing
-	WScript.Echo "HERE"
 End Sub
 
 RunMacros
